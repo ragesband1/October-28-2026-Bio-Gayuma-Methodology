@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio & Gayuma Methodology Permanent Love Equation For All</title>
+    <style>
+        :root {
+            --neon-pink: #ff007f;
+            --neon-blue: #00f0ff;
+            --neon-purple: #9d00ff;
+            --dark-bg: #0d0d1a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100/vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* Flexbox Container para sa mga Titles */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 40px;
+        }
+
+        /* Neon Button Style na may 2 Seconds Ease Animation */
+        .neon-btn {
+            background: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 2s ease; /* 2 Seconds Ease Glow Animation */
+            box-shadow: 0 0 5px rgba(0, 240, 255, 0.2);
+            flex: 1 1 200px;
+            text-align: center;
+        }
+
+        /* Hover Effect para sa Neon Buttons */
+        .neon-btn:hover {
+            color: #fff;
+            background-color: var(--neon-blue);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue), 
+                        0 0 40px var(--neon-blue), 
+                        0 0 60px var(--neon-blue);
+        }
+
+        /* Ibang kulay para sa active o napiling button */
+        .neon-btn.active {
+            color: #fff;
+            background-color: var(--neon-pink);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
+        }
+
+        /* Table Container at Styling */
+        .table-container {
+            width: 100%;
+            max-width: 800px;
+            display: none; /* Nakatago sa simula, lalabas kapag may kinlik */
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(157, 0, 255, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+
+        th {
+            background-color: rgba(157, 0, 255, 0.2);
+            color: #fff;
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px var(--neon-purple);
+        }
+
+        td a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        td a:hover {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pangunahing Pamagat -->
+    <h1>Bio & Gayuma Methodology Permanent Love Equation For All</h1>
+
+    <!-- Flexbox Container ng mga Neon Buttons -->
+    <div class="flex-container">
+        <button class="neon-btn" onclick="showLinks('bio')">Bio Section</button>
+        <button class="neon-btn" onclick="showLinks('gayuma')">Gayuma Rituals</button>
+        <button class="neon-btn" onclick="showLinks('equation')">Love Equation</button>
+        <button class="neon-btn" onclick="showLinks('permanent')">Permanent Bond</button>
+    </div>
+
+    <!-- Table na Lalabasan ng mga Links -->
+    <div class="table-container" id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th id="tableTitle">MGA PANGALAN NG MGA 4 LINKS</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Dito Awtomatikong Papasok ang 4 Links Gamit ang Script -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para sa Interactive Data Fetching -->
+    <script>
+        // Data ng mga links para sa bawat kategorya (4 links bawat isa)
+        const linksData = {
+            bio: {
+                title: "Bio Section - 4 Important Links",
+                links: [
+                    { name: "Organic Attraction Principles", url: "#" },
+                    { name: "Human Chemistry & Bio-Signals", url: "#" },
+                    { name: "DNA Compatibility Check", url: "#" },
+                    { name: "Hormonal Alignment Guide", url: "#" }
+                ]
+            },
+            gayuma: {
+                title: "Gayuma Rituals - 4 Sacred Links",
+                links: [
+                    { name: "Ancient Potion Brew Recipes", url: "#" },
+                    { name: "Midnight Incantation Spells", url: "#" },
+                    { name: "Lunar Phase Attraction Timing", url: "#" },
+                    { name: "Mystical Talisman Crafting", url: "#" }
+                ]
+            },
+            equation: {
+                title: "Love Equation - 4 Mathematical Links",
+                links: [
+                    { name: "The Perfect Match Formula", url: "#" },
+                    { name: "Probability of Forever Calculator", url: "#" },
+                    { name: "Emotional Resonance Ratio", url: "#" },
+                    { name: "Affinity Matrix Spreadsheet", url: "#" }
+                ]
+            },
+            permanent: {
+                title: "Permanent Bond - 4 Lifelong Links",
+                links: [
+                    { name: "Unbreakable Soul Tie Agreement", url: "#" },
+                    { name: "Destiny Locking Mechanics", url: "#" },
+                    { name: "Eternal Connection Grid", url: "#" },
+                    { name: "Devotion Maintenance Guide", url: "#" }
+                ]
+            }
+        };
+
+        function showLinks(category) {
+            // Kunin ang mga HTML Elements
+            const container = document.getElementById('tableContainer');
+            const tableTitle = document.getElementById('tableTitle');
+            const tableBody = document.getElementById('tableBody');
+            
+            // I-clear ang lumang laman ng table body
+            tableBody.innerHTML = "";
+
+            // Kunin ang data base sa kinlik na category
+            const selectedData = linksData[category];
+
+            // Palitan ang Title ng Table base sa pinili
+            tableTitle.textContent = selectedData.title;
+
+            // I-loop at ilagay ang 4 na links sa loob ng table rows
+            selectedData.links.forEach(item => {
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                const a = document.createElement('a');
+                
+                a.href = item.url;
+                a.textContent = item.name;
+                a.target = "_blank"; // Bubukas sa bagong tab kapag totoong link na
+                
+                td.appendChild(a);
+                tr.appendChild(td);
+                tableBody.appendChild(tr);
+            });
+
+            // Ipakita ang table container gamit ang CSS grid/block style
+            container.style.display = "block";
+
+            // Ayusin ang active state ng mga buttons para sa visual feedback
+            const buttons = document.querySelectorAll('.neon-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Idagdag ang active class sa pinindot na button
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
